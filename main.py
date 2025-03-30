@@ -150,10 +150,10 @@ app.add_middleware(
 )
 
 # Configuration - Replace these with environment variables in production
-OPENAI_API_KEY = "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"
-NEO4J_URI = "neo4j@neo4j+s://3be32e52.databases.neo4j.io"
-NEO4J_USERNAME = "neo4j"
-NEO4J_PASSWORD = "qWl_dJfF6TQUxBX7Pxse3W4tOJzpjJc24dvq8Uuog-4"
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+NEO4J_URI = os.getenv("NEO4J_URI")
+NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 # Initialize OpenAI
 llm = OpenAI(api_key=OPENAI_API_KEY )
